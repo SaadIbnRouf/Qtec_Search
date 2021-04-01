@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
+</head>
+<body>
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="SEARCH YOUR QUERY"><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <div>
+        <a href="{% url 'search:search_details' %}" class="button button-primary">Search Details</a>
+    </div>
+</div>
+</body>
+</html>

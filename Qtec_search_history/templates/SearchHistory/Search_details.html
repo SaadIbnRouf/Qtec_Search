@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="one-third column">
+            <h3>Search Details</h3>
+            {% if lists == None %}
+            <h2>No Search History</h2>
+            {% else %}
+            <ul>
+                {% for list in lists %}
+                <li>{{ list }}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+        <div class="one-third column">
+
+            <h4>All Keywords</h4>
+
+
+            <ul>
+                {% for list in lists_keyword %}
+                <li>{{ list.keyword }}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+
+        <div class="one-third column">
+            <h4>All User</h4>
+            <ul>
+                {% for list in lists_user %}
+                <li>{{ list.user}}</li>
+                {% endfor %}
+            </ul>
+
+
+            {% endif %}
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
